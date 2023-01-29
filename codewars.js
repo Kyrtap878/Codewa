@@ -73,4 +73,7 @@ function findAverage(array) {
 }
 }
 
-console.log(findAverage([]));
+// reverses the string passed into it.
+function solution(str){
+  return Array.from(str).reverse().join("").toString();
+}
