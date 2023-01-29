@@ -60,4 +60,17 @@ function isIsogram(str){
  }
  return true;
 }
-console.log(isIsogram("aba"));
+
+//Write a function which calculates the average of the numbers in a given list.
+function findAverage(array) {
+  let sum = 0;
+  if(array.length === 0){return 0;}else{
+  for(let i in array){
+    sum += array[i];
+  }
+  sum = sum / array.length;
+  return sum;
+}
+}
+
+console.log(findAverage([]));
