@@ -27,3 +27,37 @@ function evenOrOdd(number) {
     return "Odd";
   }
 }
+
+// function that counts the number of sheep present in the array (true means present).
+function countSheeps(arrayOfSheep) {
+  let counter = 0;
+  for (let i in arrayOfSheep) {
+    if (arrayOfSheep[i] === true) {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+//return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+function getMiddle(s)
+{ 
+  let output = "";
+  let indexOfMiddleElement = s.length / 2 ;
+  indexOfMiddleElement = Math.floor(indexOfMiddleElement);
+  if(!(s.length % 2 === 0)){
+    return output = s[indexOfMiddleElement];
+  }else{
+    return output = s[indexOfMiddleElement-1] + s[indexOfMiddleElement]
+  } 
+}
+
+//Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+function isIsogram(str){
+  str = str.toLowerCase();
+ for(let i in str){
+  if(str.indexOf(str[i]) === str.lastIndexOf(str[i])){}else{return false;}
+ }
+ return true;
+}
+console.log(isIsogram("aba"));
